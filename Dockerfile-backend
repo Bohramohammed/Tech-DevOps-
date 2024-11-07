@@ -1,0 +1,10 @@
+# Backend Dockerfile
+FROM node:14
+
+WORKDIR /app
+COPY . /app
+RUN npm install pg
+
+# Make sure you expose the correct port
+EXPOSE 5000
+CMD ["npm", "start"]
